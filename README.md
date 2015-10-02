@@ -1,7 +1,7 @@
-Persona theme for NodeBB
+Creepr theme for NodeBB
 ====================
 
-Persona is the new default theme for NodeBB as of v0.7.1
+Creepr, based on Persona, is a custom theme for the Creepr Network. 
 
 ## Addons
 
