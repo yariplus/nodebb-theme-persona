@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-persona",
+  "name": "nodebb-theme-creepr",
   "version": "3.0.34",
   "nbbpm": {
     "compatibility": "^0.8.2"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "Creepr theme for NodeBB built on Persona",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/Creepr/nodebb-theme-creepr"
   },
   "keywords": [
     "nodebb",
@@ -32,10 +32,15 @@
       "name": "Barış Soner Uşaklı",
       "email": "baris@designcreateplay.com",
       "url": "https://github.com/barisusakli"
+    },
+    {
+      "name": "Samuel Roth",
+      "email": "s-roth@onu.edu",
+      "url": "https://github.com/sejr"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/Creepr/nodebb-theme-creepr/issues"
   }
 }
