@@ -137,7 +137,8 @@
 
 			<hr />
 
-			<!-- IF sso.length -->
+			<!-- Temporary fix for the edit view -->
+			<!-- I/F/ /s/s/o/./l/e/n/g/t/h -->
 			<label class="control-label">[[user:sso.title]]</label>
 			<div class="list-group">
 				<!-- BEGIN sso -->
@@ -148,7 +149,7 @@
 				</a>
 				<!-- END sso -->
 			</div>
-			<!-- ENDIF sso.length -->
+			<!-- E/N/D/I/F/ /s/s/o/./l/e/n/g/t/h -->
 		</div>
 	</div>
 
