@@ -3,8 +3,8 @@
 	<!-- IF @first -->
 	<div component="category/posts">
 		<p>
-			<strong>{../topic.title}</strong><br>
-			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->"><span class="timeago" title="{../relativeTime}"></span></a> by <a href="{config.relative_path}/user/{../user.username}">{../user.username}</a>
+			<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->"><strong>{../topic.title}</strong></a><br>
+			<span class="timeago" title="{../relativeTime}"></span> by <a href="{config.relative_path}/user/{../user.username}">{../user.username}</a>
 		</p>
 		<div class="post-content">
 			{../content}
