@@ -21,11 +21,11 @@
 	<!-- ENDIF @first -->
 	<!-- END posts -->
 
-	<!-- IF !../posts.length -->
+	<!-- IF !categories.posts.length -->
 	<div component="category/posts">
 		<div class="post-content">
 			[[category:no_new_posts]]
 		</div>
 	</div>
-	<!-- ENDIF !../posts.length -->
+	<!-- ENDIF !categories.posts.length -->
 </div>
