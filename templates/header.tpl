@@ -2,14 +2,10 @@
 <html lang="{function.localeToHTML, defaultLang}">
 <head>
 	<title>{browserTitle}</title>
-	<!-- BEGIN metaTags -->
-	{function.buildMetaTag}
-	<!-- END metaTags -->
+	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{config.cache-buster}" />
 	<!-- IF bootswatchCSS --><link id="bootswatchCSS" href="{bootswatchCSS}" rel="stylesheet" media="screen"><!-- ENDIF bootswatchCSS -->
-	<!-- BEGIN linkTags -->
-	{function.buildLinkTag}
-	<!-- END linkTags -->
+	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
 
 	<!--[if lt IE 9]>
   		<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.min.js"></script>
@@ -37,11 +33,17 @@
 	<!-- ENDIF useCustomCSS -->
 </head>
 
-<body>
-	<nav id="menu">
+<body class="{bodyClass}">
+	<nav id="menu" class="hidden">
 		<section class="menu-profile">
+			<!-- IF user.uid -->
+			<!-- IF user.picture -->
 			<img src="{user.picture}"/>
+			<!-- ELSE -->
+			<div class="user-icon" style="background-color: {user.icon:bgColor};">{user.icon:text}</div>
+			<!-- ENDIF user.picture -->
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
+			<!-- ENDIF user.uid -->
 		</section>
 
 		<section class="menu-section" data-section="navigation">
@@ -60,7 +62,7 @@
 				[[global:header.notifications]]
 				<span class="counter" component="notifications/icon" data-content="0"></span>
 			</h3>
-			<ul class="menu-section-list" component="notifications/list"></ul>
+			<ul class="menu-section-list notification-list-mobile" component="notifications/list"></ul>
 		</section>
 
 		<section class="menu-section" data-section="chats">
@@ -74,10 +76,10 @@
 	</nav>
 
 	<main id="panel">
-		<nav class="navbar navbar-default navbar-fixed-top header" role="navigation" id="header-menu" component="navbar">
+		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
 		</nav>
-		<div class="container" id="content" component="header">
+		<div class="container" id="content">
 		<!-- IMPORT partials/noscript/warning.tpl -->

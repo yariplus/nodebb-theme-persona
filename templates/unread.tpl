@@ -21,7 +21,7 @@
 				<li class="divider"></li>
 				<!-- BEGIN categories -->
 				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF icon --> {categories.name}</a>
+					<a role="menu-item" href="#"><!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->
 			</ul>
@@ -45,7 +45,7 @@
 		</div>
 	</div>
 
-	<hr />
+	<hr class="hidden-xs"/>
 
 	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>

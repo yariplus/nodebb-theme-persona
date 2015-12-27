@@ -27,7 +27,9 @@
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li id="user_label" class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
-							<img component="header/userpicture" src="{user.picture}" alt="{user.username}" /> <span id="user-header-name" class="visible-xs-inline">{user.username}</span>
+							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"<!-- IF !user.picture --> style="display: none;"<!-- ENDIF !user.picture --> />
+							<div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture --> display: none;"<!-- ENDIF user.picture -->">{user.icon:text}</div>
+							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</a>
 						<ul id="user-control-list" component="header/usercontrol" class="dropdown-menu" aria-labelledby="user_dropdown">
 							<li>
@@ -121,17 +123,17 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li>
 						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET" action="">
-							<div class="hide" id="search-fields">
+							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+							<div class="hidden" id="search-fields">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
-							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 						</form>
 					</li>
-					<li class="visible-xs">
+					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
 							<i class="fa fa-search fa-fw"></i> [[global:search]]
 						</a>
@@ -173,7 +175,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+						<a href="{relative_path}{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

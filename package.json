@@ -1,8 +1,8 @@
 {
   "name": "nodebb-theme-creepr",
-  "version": "3.1.10",
+  "version": "4.0.50",
   "nbbpm": {
-    "compatibility": "^0.8.2"
+    "compatibility": "^0.8.2 || ^0.9.0"
   },
   "description": "Creepr theme for NodeBB built on Persona",
   "main": "theme.less",
