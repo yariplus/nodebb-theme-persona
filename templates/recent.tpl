@@ -59,3 +59,4 @@
 		<!-- ENDIF config.usePagination -->
 	</div>
 </div>
+<div widget-area="footer"></div>
