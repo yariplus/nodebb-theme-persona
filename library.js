@@ -81,6 +81,11 @@ library.defineWidgetAreas = function(areas, callback) {
 			name: "Topic Footer",
 			template: "topic.tpl",
 			location: "footer"
+		},
+		{
+			name: "Recent Footer",
+			template: "recent.tpl",
+			location: "footer"
 		}
 	]);
 
